@@ -1,0 +1,115 @@
+:root {
+    --gold: #f3c300;
+    --dark-bg: #10121b;
+    --navy-deep: #192142;
+}
+
+body {
+    background-color: var(--dark-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+.text-gold { color: var(--gold); }
+.bg-dark-royal { background-color: var(--dark-bg); }
+
+/* الجانب الأيسر (الصورة والمعلومات) */
+.contact-info-side {
+    background: linear-gradient(rgba(16, 18, 27, 0.7), rgba(25, 33, 66, 0.8)), 
+                url('../img/facilites_bg.jpg') center/cover no-repeat;
+    position: relative;
+    border-right: 2px solid rgba(243, 195, 0, 0.2);
+}
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background: rgba(243, 195, 0, 0.1);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+}
+
+/* ستايل الفورم */
+.royal-input {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+}
+
+.royal-input:focus {
+    border-color: var(--gold) !important;
+    box-shadow: 0 0 10px rgba(243, 195, 0, 0.2) !important;
+}
+
+.title-line {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin-top: 10px;
+}
+
+/* الزرار */
+.btn-gold-action {
+    background-color: var(--gold);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 2px;
+}
+
+.btn-gold-action:hover {
+    background-color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* تحسينات الموبايل */
+@media (max-width: 992px) {
+    .contact-info-side {
+        display: none !important;
+    }
+}
+/* Custom Modal Styling */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 18, 27, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.custom-modal-content {
+    background: #192142;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    border: 1px solid var(--gold);
+    max-width: 400px;
+    box-shadow: 0 0 30px rgba(243, 195, 0, 0.2);
+    animation: slideUp 0.4s ease-out;
+}
+
+.success-icon {
+    font-size: 60px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

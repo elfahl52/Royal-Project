@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Room - Royal Hotel</title>
+    <!-- font Awsome -->
+    <link rel="stylesheet" href="fontawesome-free-7.1.0-web/fontawesome-free-7.1.0-web/css/all.min.css">
+    <!-- boatstrap -->
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <!-- start Header -->
+    <header class="booking-header">
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <i class="fas fa-crown text-warning me-2"></i>
+                    <span class="fw-bold fs-4 text-dark">Royal Hotel</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-dark"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="#">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="#">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-medium" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-warning fw-medium" href="book.html">Book Room</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-warning text-dark fw-bold rounded-pill px-4">Book Now</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Booking Hero Section -->
+        <div class="booking-hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="booking-hero-content text-center">
+                            <h1 class="booking-hero-title">Book Your Perfect Stay</h1>
+                            <p class="booking-hero-subtitle">Experience luxury and comfort at Royal Hotel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- End Header -->
+
+    <!-- Main Booking Content -->
+    <main class="booking-main">
+        <div class="container">
+            <div class="row">
+                <!-- Booking Form Section -->
+                <div class="col-lg-8">
+                    <div class="booking-form-container">
+                        <h2 class="section-title">Reservation Details</h2>
+                        
+                        <!-- Progress Steps -->
+                        <div class="booking-progress">
+                            <div class="booking-progress-bar"></div>
+                            <div class="progress-step active" data-step="1">
+                                <div class="step-number">1</div>
+                                <div class="step-label">Room Selection</div>
+                            </div>
+                            <div class="progress-step" data-step="2">
+                                <div class="step-number">2</div>
+                                <div class="step-label">Guest Details</div>
+                            </div>
+                            <div class="progress-step" data-step="3">
+                                <div class="step-number">3</div>
+                                <div class="step-label">Payment</div>
+                            </div>
+                            <div class="progress-step" data-step="4">
+                                <div class="step-number">4</div>
+                                <div class="step-label">Confirmation</div>
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Room Selection -->
+                        <div class="booking-step active" id="step1">
+                            <h3>Select Your Room</h3>
+                            <form id="roomSelectionForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="checkIn">Check-in Date</label>
+                                            <input type="date" class="form-control" id="checkIn" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="checkOut">Check-out Date</label>
+                                            <input type="date" class="form-control" id="checkOut" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="adults">Adults</label>
+                                            <select class="form-select" id="adults" required>
+                                                <option value="">Select</option>
+                                                <option value="1">1 Adult</option>
+                                                <option value="2">2 Adults</option>
+                                                <option value="3">3 Adults</option>
+                                                <option value="4">4 Adults</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="children">Children</label>
+                                            <select class="form-select" id="children">
+                                                <option value="">Select</option>
+                                                <option value="0">0 Children</option>
+                                                <option value="1">1 Child</option>
+                                                <option value="2">2 Children</option>
+                                                <option value="3">3 Children</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="roomType">Room Type</label>
+                                            <select class="form-select" id="roomType" required>
+                                                <option value="">Select Room</option>
+                                                <option value="standard" data-price="250">Standard Room - $250/night</option>
+                                                <option value="deluxe" data-price="380">Deluxe Room - $380/night</option>
+                                                <option value="suite" data-price="450">Suite - $450/night</option>
+                                                <option value="presidential" data-price="590">Presidential - $590/night</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="room-selection mt-4">
+                                    <h4>Available Rooms</h4>
+                                    <div class="room-cards" id="roomCards">
+                                        <!-- Room cards will be dynamically loaded here -->
+                                    </div>
+                                </div>
+
+                                <div class="step-navigation">
+                                    <button type="button" class="btn btn-next" onclick="nextStep(2)">Continue to Guest Details</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Step 2: Guest Details -->
+                        <div class="booking-step" id="step2">
+                            <h3>Guest Information</h3>
+                            <form id="guestDetailsForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group floating-label">
+                                            <input type="text" class="form-control" id="firstName" placeholder=" " required>
+                                            <label for="firstName">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group floating-label">
+                                            <input type="text" class="form-control" id="lastName" placeholder=" " required>
+                                            <label for="lastName">Last Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group floating-label">
+                                            <input type="email" class="form-control" id="email" placeholder=" " required>
+                                            <label for="email">Email Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group floating-label">
+                                            <input type="tel" class="form-control" id="phone" placeholder=" " required>
+                                            <label for="phone">Phone Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="country">Country</label>
+                                            <select class="form-select" id="country" required>
+                                                <option value="">Select Country</option>
+                                                <option value="US">United States</option>
+                                                <option value="UK">United Kingdom</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="AU">Australia</option>
+                                                <option value="FR">France</option>
+                                                <option value="DE">Germany</option>
+                                                <option value="IT">Italy</option>
+                                                <option value="ES">Spain</option>
+                                                <option value="JP">Japan</option>
+                                                <option value="CN">China</option>
+                                                <option value="OTHER">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="arrivalTime">Estimated Arrival Time</label>
+                                            <select class="form-select" id="arrivalTime">
+                                                <option value="">Select Time</option>
+                                                <option value="morning">Morning (6AM - 12PM)</option>
+                                                <option value="afternoon">Afternoon (12PM - 6PM)</option>
+                                                <option value="evening">Evening (6PM - 11PM)</option>
+                                                <option value="night">Night (11PM - 6AM)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="specialOccasion">Special Occasion</label>
+                                            <select class="form-select" id="specialOccasion">
+                                                <option value="">Select Occasion</option>
+                                                <option value="business">Business Trip</option>
+                                                <option value="leisure">Leisure/Vacation</option>
+                                                <option value="romantic">Romantic Getaway</option>
+                                                <option value="family">Family Vacation</option>
+                                                <option value="celebration">Celebration</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-12">
+                                        <div class="form-group floating-label">
+                                            <textarea class="form-control" id="specialRequests" rows="4" placeholder="Any special requests, dietary restrictions, or preferences?"></textarea>
+                                            <label for="specialRequests">Special Requests</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Additional Services -->
+                                <div class="additional-services mt-4">
+                                    <h4>Additional Services</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="service-option">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="airportTransfer" value="airport">
+                                                    <label class="form-check-label" for="airportTransfer">
+                                                        <i class="fas fa-plane"></i>
+                                                        Airport Transfer ($50)
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="service-option">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="spaAccess" value="spa">
+                                                    <label class="form-check-label" for="spaAccess">
+                                                        <i class="fas fa-spa"></i>
+                                                        Spa Access ($75)
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <div class="service-option">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="breakfast" value="breakfast" checked>
+                                                    <label class="form-check-label" for="breakfast">
+                                                        <i class="fas fa-coffee"></i>
+                                                        Breakfast Included
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="service-option">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="lateCheckout" value="late">
+                                                    <label class="form-check-label" for="lateCheckout">
+                                                        <i class="fas fa-clock"></i>
+                                                        Late Checkout (2PM)
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-navigation">
+                                    <button type="button" class="btn btn-secondary" onclick="prevStep(1)">Back</button>
+                                    <button type="button" class="btn btn-next" onclick="nextStep(3)">Continue to Payment</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Step 3: Payment -->
+                        <div class="booking-step" id="step3">
+                            <h3>Payment Information</h3>
+                            <form id="paymentForm">
+                                <div class="payment-methods">
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" value="credit" checked>
+                                        <label class="form-check-label" for="creditCard">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span class="payment-name"></span>Credit Card</span>
+                                            <span class="payment-desc">Visa, Mastercard, Amex</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="debitCard" value="debit">
+                                        <label class="form-check-label" for="debitCard">
+                                            <i class="fas fa-credit-card"></i>
+                                            <span class="payment-name">Debit Card</span>
+                                            <span class="payment-desc">Direct from bank account</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="paypal" value="paypal">
+                                        <label class="form-check-label" for="paypal">
+                                            <i class="fab fa-paypal"></i>
+                                            <span class="payment-name">PayPal</span>
+                                            <span class="payment-desc">Fast & secure</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="applePay" value="apple">
+                                        <label class="form-check-label" for="applePay">
+                                            <i class="fab fa-apple-pay"></i>
+                                            <span class="payment-name">Apple Pay</span>
+                                            <span class="payment-desc">Touch ID enabled</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="googlePay" value="google">
+                                        <label class="form-check-label" for="googlePay">
+                                            <i class="fab fa-google-pay"></i>
+                                            <span class="payment-name">Google Pay</span>
+                                            <span class="payment-desc">One-click payment</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="bankTransfer" value="bank">
+                                        <label class="form-check-label" for="bankTransfer">
+                                            <i class="fas fa-university"></i>
+                                            <span class="payment-name">Bank Transfer</span>
+                                            <span class="payment-desc">Wire transfer available</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="crypto" value="crypto">
+                                        <label class="form-check-label" for="crypto">
+                                            <i class="fab fa-bitcoin"></i>
+                                            <span class="payment-name">Cryptocurrency</span>
+                                            <span class="payment-desc">Bitcoin, Ethereum</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-check payment-option">
+                                        <input class="form-check-input" type="radio" name="paymentMethod" id="cash" value="cash">
+                                        <label class="form-check-label" for="cash">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                            <span class="payment-name">Cash on Arrival</span>
+                                            <span class="payment-desc">Pay at hotel</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="card-details mt-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="cardNumber">Card Number *</label>
+                                                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="expiryDate">Expiry Date *</label>
+                                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="cvv">CVV *</label>
+                                                <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="cardName">Name on Card *</label>
+                                                <input type="text" class="form-control" id="cardName" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="step-navigation">
+                                    <button type="button" class="btn btn-secondary" onclick="prevStep(2)">Back</button>
+                                    <button type="button" class="btn btn-next" onclick="nextStep(4)">Complete Booking</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Step 4: Confirmation -->
+                        <div class="booking-step" id="step4">
+                            <div class="booking-confirmation">
+                                <div class="success-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Booking Confirmed!</h3>
+                                <p>Your reservation has been successfully completed.</p>
+                                
+                                <div class="booking-summary">
+                                    <h4>Booking Details</h4>
+                                    <div id="confirmationDetails">
+                                        <!-- Details will be populated dynamically -->
+                                    </div>
+                                </div>
+
+                                <div class="booking-actions">
+                                    <button class="btn btn-primary" onclick="window.print()">Print Confirmation</button>
+                                    <button class="btn btn-secondary" onclick="window.location.href='index.html'">Return Home</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Summary Sidebar -->
+                <div class="col-lg-4">
+                    <div class="booking-summary-sidebar">
+                        <h3>Booking Summary</h3>
+                        <div class="summary-content">
+                            <div class="summary-item">
+                                <span class="label">Room Type:</span>
+                                <span class="value" id="summaryRoomType">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Check-in:</span>
+                                <span class="value" id="summaryCheckIn">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Check-out:</span>
+                                <span class="value" id="summaryCheckOut">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Nights:</span>
+                                <span class="value" id="summaryNights">-</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">Guests:</span>
+                                <span class="value" id="summaryGuests">-</span>
+                            </div>
+                            <hr>
+                            <div class="summary-item total">
+                                <span class="label">Total Amount:</span>
+                                <span class="value" id="summaryTotal">$0</span>
+                            </div>
+                        </div>
+
+                        <div class="booking-features">
+                            <h4>What's Included</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                <li><i class="fas fa-check"></i> Free Wi-Fi</li>
+                                <li><i class="fas fa-check"></i> Room Service</li>
+                                <li><i class="fas fa-check"></i> Spa Access</li>
+                                <li><i class="fas fa-check"></i> Airport Transfer</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="booking-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2026 <span class="text-info fs-5">khaled Elfahl</span>. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+
+</html>

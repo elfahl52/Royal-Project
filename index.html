@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Hotel</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free-7.1.0-web/fontawesome-free-7.1.0-web/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =============================================
+         HEADER — Hero + Navbar + Booking Bar
+         ============================================= -->
+    <header class="header-home">
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <div class="container">
+
+                <!-- Brand Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <i class="fas fa-crown text-warning me-2"></i>
+                    <span class="fw-bold fs-4 text-dark">Royal Hotel</span>
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-dark"></i>
+                </button>
+
+                <!-- Nav Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link active text-dark fw-medium" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-dark fw-medium" href="book.html">Book Room</a></li>
+                    </ul>
+
+                    <button class="btn btn-warning text-dark fw-bold rounded-pill px-4"
+                        onclick="window.location.href='book.html'">
+                        Book Now
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-text">
+                            <p class="sub-title">Away from monotonous life</p>
+                            <h1 class="main-title">Relax Your Mind</h1>
+                            <p class="description">
+                                If you are looking at blank cassettes on the web, you may be very confused
+                                at the difference in price. You may see some for as low as $17 each.
+                            </p>
+                            <a href="#" class="btn btn-yellow">GET STARTED</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Hero Content -->
+
+        <!-- Quick Booking Bar -->
+        <div class="booking-area">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- Label -->
+                    <div class="col-lg-3 col-md-4">
+                        <div class="booking-title">
+                            <h3>BOOK<br>YOUR ROOM</h3>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="col-lg-9 col-md-8">
+                        <div class="booking-form">
+                            <form class="row g-3" id="headerBookingForm">
+
+                                <!-- Check-in -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="input-group">
+                                        <input type="date" class="form-control" required>
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Check-out -->
+                                <div class="col-lg-3 col-md-6 col-12">
+                                    <div class="input-group">
+                                        <input type="date" class="form-control" required>
+                                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Adults -->
+                                <div class="col-lg-2 col-md-6 col-6">
+                                    <div class="input-group">
+                                        <select class="form-select" required>
+                                            <option>Adults</option>
+                                            <option>1</option>
+                                            <option selected>2</option>
+                                        </select>
+                                        <span class="input-group-text"><i class="fas fa-users"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Children -->
+                                <div class="col-lg-2 col-md-6 col-6">
+                                    <div class="input-group">
+                                        <select class="form-select">
+                                            <option>Children</option>
+                                            <option>0</option>
+                                            <option>1</option>
+                                        </select>
+                                        <span class="input-group-text"><i class="fas fa-child"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Room -->
+                                <div class="col-lg-2 col-md-6 col-12">
+                                    <div class="input-group">
+                                        <select class="form-select" required>
+                                            <option>Room</option>
+                                            <option>Standard</option>
+                                            <option>Deluxe</option>
+                                        </select>
+                                        <span class="input-group-text"><i class="fas fa-bed"></i></span>
+                                    </div>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="col-12 d-flex flex-column flex-md-row gap-2">
+                                    <button class="btn btn-book-now w-100">BOOK NOW</button>
+                                    <button class="btn btn-outline-light w-100">Advanced</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Quick Booking Bar -->
+
+    </header>
+    <!-- END HEADER -->
+
+
+    <!-- =============================================
+         ROOMS — Hotel Accommodation Section
+         ============================================= -->
+    <div id="accommodation"></div>
+    <section class="hotel-sec">
+
+        <div class="text-center">
+            <h3>Hotel Accommodation</h3>
+            <p>
+                We all live in an age that belongs to the young at heart. Life that is becoming extremely
+                fast — we offer you a sanctuary of comfort and elegance.
+            </p>
+        </div>
+
+        <div class="container">
+
+            <!-- Row 1: Four Room Cards -->
+            <div class="row">
+
+                <!-- Double Deluxe Room -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="img/photo-1566665797739-1674de7a421a.jfif" alt="Double Deluxe Room">
+                            <a href="#" aria-label="Book Now"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Double Deluxe Room</h4>
+                            <div class="room-features">
+                                <span><i class="fas fa-bed"></i> King Bed</span>
+                                <span><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+                                <span><i class="fas fa-coffee"></i> Breakfast</span>
+                            </div>
+                            <p><sup>$</sup>250 <span>/night</span></p>
+                            <small><i class="far fa-clock"></i> Flexible check-in · 24/7 support</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Ocean Suite -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="img/photo-1578683010236-d716f9a3f461.jfif" alt="Premium Ocean Suite">
+                            <a href="#" aria-label="Book Now"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Premium Ocean Suite</h4>
+                            <div class="room-features">
+                                <span><i class="fas fa-bed"></i> Super King</span>
+                                <span><i class="fas fa-hot-tub"></i> Jacuzzi</span>
+                                <span><i class="fas fa-mountain"></i> Sea View</span>
+                            </div>
+                            <p><sup>$</sup>380 <span>/night</span></p>
+                            <small><i class="fas fa-champagne-glasses"></i> Welcome drink included</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Studio -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="img/photo-1582719478250-c89cae4dc85b.jfif" alt="Executive Studio">
+                            <a href="#" aria-label="Book Now"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Executive Studio</h4>
+                            <div class="room-features">
+                                <span><i class="fas fa-laptop"></i> Work Desk</span>
+                                <span><i class="fas fa-tv"></i> 4K Smart TV</span>
+                                <span><i class="fas fa-utensils"></i> Mini Bar</span>
+                            </div>
+                            <p><sup>$</sup>310 <span>/night</span></p>
+                            <small><i class="fas fa-concierge-bell"></i> Express service</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Grand Room -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="img/photo-1590490360182-c33d57733427.jfif" alt="Family Grand Room">
+                            <a href="#" aria-label="Book Now"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Family Grand Room</h4>
+                            <div class="room-features">
+                                <span><i class="fas fa-people-arrows"></i> 2+2 Capacity</span>
+                                <span><i class="fas fa-baby-carriage"></i> Kid Friendly</span>
+                                <span><i class="fas fa-swimming-pool"></i> Pool Access</span>
+                            </div>
+                            <p><sup>$</sup>450 <span>/night</span></p>
+                            <small><i class="fas fa-gift"></i> Extra 10% for long stays</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- End Row 1 -->
+
+            <!-- Row 2: Four More Room Cards -->
+            <div class="row mt-3">
+
+                <!-- Penthouse Suite -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="img/photo-1611892440504-42a792e24d32.jfif" alt="Penthouse Suite">
+                            <a href="#"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Penthouse Suite</h4>
+                            <div class="room-features">
+                                <span><i class="fas fa-city"></i> Skyline View</span>
+                                <span><i class="fas fa-wine-glass-alt"></i> Private Bar</span>
+                                <span><i class="fas fa-smoking-ban"></i> Non-Smoking</span>
+                            </div>
+                            <p><sup>$</sup>590 <span>/night</span></p>
+                            <small><i class="fas fa-key"></i> VIP check-in</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garden Retreat -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="img/photo-1618773928121-c32242e63f39%20(1).jfif" alt="Garden Retreat">
+                            <a href="#"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Garden Retreat</h4>
+                            <div class="room-features">
+                                <span><i class="fas fa-tree"></i> Private Terrace</span>
+                                <span><i class="fas fa-fan"></i> Airy Ambiance</span>
+                                <span><i class="fas fa-dumbbell"></i> Gym Access</span>
+                            </div>
+                            <p><sup>$</sup>210 <span>/night</span></p>
+                            <small><i class="fas fa-leaf"></i> Eco-friendly stay</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Twin Luxury -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="img/room3.jpg" alt="Twin Luxury Room">
+                            <a href="#"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Twin Luxury</h4>
+                            <div class="room-features">
+                                <span><i class="fas fa-bed"></i> Twin XL Beds</span>
+                                <span><i class="fas fa-bath"></i> Rainfall Shower</span>
+                                <span><i class="fas fa-headphones"></i> Soundproof</span>
+                            </div>
+                            <p><sup>$</sup>230 <span>/night</span></p>
+                            <small><i class="fas fa-clock"></i> 24h room service</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Romantic Honeymoon -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="img-card">
+                            <img src="img/room2.jpg" alt="Romantic Honeymoon Suite">
+                            <a href="#"><i class="fas fa-calendar-check"></i> Book Now</a>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="room-title">Romantic Honeymoon</h4>
+                            <div class="room-features">
+                                <span><i class="fas fa-heart"></i> Candlelight Dinner</span>
+                                <span><i class="fas fa-champagne"></i> Champagne</span>
+                                <span><i class="fas fa-spa"></i> Spa Coupon</span>
+                            </div>
+                            <p><sup>$</sup>420 <span>/night</span></p>
+                            <small><i class="fas fa-star"></i> Special anniversary deal</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- End Row 2 -->
+
+        </div>
+    </section>
+    <!-- END ROOMS -->
+
+
+    <!-- =============================================
+         FACILITIES — Royal Facilities Section
+         ============================================= -->
+    <section class="facilities-section">
+        <div class="container text-center">
+
+            <h2 class="title">Royal Facilities</h2>
+            <p class="subtitle">Who are in extremely love with eco-friendly systems.</p>
+
+            <div class="row g-4 mt-4">
+
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <i class="fas fa-utensils"></i>
+                        <h5>Restaurant</h5>
+                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
+                            power.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <i class="fas fa-bicycle"></i>
+                        <h5>Sports Club</h5>
+                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
+                            power.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <i class="fas fa-swimming-pool"></i>
+                        <h5>Swimming Pool</h5>
+                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
+                            power.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <i class="fas fa-car"></i>
+                        <h5>Rent a Car</h5>
+                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
+                            power.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <i class="fas fa-dumbbell"></i>
+                        <h5>Gymnasium</h5>
+                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
+                            power.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="facility-card">
+                        <i class="fas fa-glass-martini-alt"></i>
+                        <h5>Bar</h5>
+                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and
+                            power.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END FACILITIES -->
+
+
+    <!-- =============================================
+         ABOUT — About Us Section
+         ============================================= -->
+    <div id="about"></div>
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Left: Text Content -->
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2 class="about-title">About Us</h2>
+                        <h3 class="about-subtitle">Our History &amp; Mission</h3>
+
+                        <p class="about-description">
+                            Welcome to Royal Hotel, where luxury meets legacy. For over three decades, we've been
+                            the cornerstone of hospitality excellence, serving discerning guests from around the world.
+                            Our commitment to unparalleled service and attention to detail has made us a beacon of
+                            sophistication in the heart of the city.
+                        </p>
+                        <p class="about-description">
+                            Our mission is simple: to create extraordinary experiences that linger in your memory
+                            long after your stay. Every detail — from arrival to departure — is carefully crafted
+                            to exceed your expectations and redefine what luxury hospitality truly means.
+                        </p>
+
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-crown"></i>
+                                <span>30+ Years of Excellence</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-award"></i>
+                                <span>Award-Winning Service</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-users"></i>
+                                <span>50,000+ Happy Guests</span>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-about">Learn More About Us</button>
+                    </div>
+                </div>
+
+                <!-- Right: Image + Stats -->
+                <div class="col-lg-6">
+                    <div class="about-image-container">
+                        <div class="about-image-wrapper">
+                            <img src="img/about_bg.jpg" alt="Royal Hotel Exterior" class="about-main-image">
+                            <div class="image-overlay"></div>
+                            <div class="image-badge">
+                                <i class="fas fa-star"></i>
+                                <span>Since 1996</span>
+                            </div>
+                        </div>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">150+</div>
+                                <div class="stat-label">Luxury Rooms</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Premium Service</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT -->
+
+
+    <!-- =============================================
+         TESTIMONIALS — Swiper Slider
+         ============================================= -->
+    <section class="testimonial-sec">
+        <div class="container">
+
+            <div class="testimonial-header">
+                <h2 class="testimonial-title">What Our Clients Say</h2>
+                <p class="testimonial-subtitle">
+                    The French Revolution constituted for the conscience of the dominant aristocratic class
+                    a fall from grace — but for us, genuine voices of excellence and trust.
+                </p>
+            </div>
+
+            <!-- Swiper Wrapper -->
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
+                                <p class="testimonial-text">
+                                    "Absolutely exceptional service! The staff went above and beyond to make our
+                                    anniversary celebration unforgettable. The room was luxurious and the view
+                                    breathtaking."
+                                </p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="img/Image-01.jpg" alt="Sarah Johnson" class="author-avatar"
+                                    onerror="this.src='img/download.jpg'">
+                                <div class="author-details">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Business Executive</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
+                                <p class="testimonial-text">
+                                    "A perfect blend of luxury and comfort. The spa facilities are world-class,
+                                    and the dining experience was simply divine. I travel frequently for business."
+                                </p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="img/Image-02.jpg" alt="Michael Chen" class="author-avatar"
+                                    onerror="this.src='img/download.jpg'">
+                                <div class="author-details">
+                                    <h4>Michael Chen</h4>
+                                    <p>Tech Entrepreneur</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
+                                <p class="testimonial-text">
+                                    "Our family vacation was magical! The kids loved the pool, and my husband
+                                    and I enjoyed the peaceful spa. The concierge helped us plan amazing day trips."
+                                </p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="img/Image-03.jpg" alt="Emily Rodriguez" class="author-avatar"
+                                    onerror="this.src='img/download.jpg'">
+                                <div class="author-details">
+                                    <h4>Emily Rodriguez</h4>
+                                    <p>Marketing Director</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
+                                <p class="testimonial-text">
+                                    "Impeccable service and stunning architecture. The attention to detail in
+                                    every aspect of our stay was remarkable. From the moment we arrived, we felt like
+                                    royalty."
+                                </p>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="img/Image-04.jpg" alt="David Williams" class="author-avatar"
+                                    onerror="this.src='img/download.jpg'">
+                                <div class="author-details">
+                                    <h4>David Williams</h4>
+                                    <p>Architect</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- End .swiper-wrapper -->
+
+                <!-- Swiper Navigation Arrows -->
+                <div class="swiper-button-next testimonial-nav-next">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="swiper-button-prev testimonial-nav-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+
+                <!-- Swiper Pagination Dots -->
+                <div class="swiper-pagination testimonial-pagination"></div>
+
+                <!-- Autoplay Progress Bar -->
+                <div class="testimonial-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+            </div><!-- End .testimonialSwiper -->
+
+        </div>
+    </section>
+    <!-- END TESTIMONIALS -->
+
+
+    <!-- =============================================
+         BLOG — Latest Posts Section
+         ============================================= -->
+    <section class="latest-post">
+        <div class="container">
+
+            <div class="section-header text-center mb-5">
+                <h3>Latest Posts From Blog</h3>
+                <p>
+                    The French Revolution constituted for the conscience of the dominant aristocratic
+                    class a fall from grace, but for the world it marked the dawn of modern democracy.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <!-- Post 1 -->
+                <div class="col-md-4">
+                    <div class="post-item">
+                        <div class="post-image">
+                            <img src="img/blog-1.jpg" alt="Low Cost Advertising Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Travel</span>
+                                <span class="post-date">January 31, 2018</span>
+                            </div>
+                            <h4 class="post-title">Low Cost Advertising</h4>
+                            <p class="post-excerpt">
+                                Acres of Diamonds… you've read the famous story, or at least had it related to you.
+                                A farmer once heard about diamonds and sold his land to search for them.
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="col-md-4">
+                    <div class="post-item">
+                        <div class="post-image">
+                            <img src="img/blog-2.jpg" alt="Bold Minimalism Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Style</span>
+                                <span class="post-date">January 31, 2018</span>
+                            </div>
+                            <h4 class="post-title">Bold Minimalism</h4>
+                            <p class="post-excerpt">
+                                The intersection of comfort and sophistication defines today's urban wardrobe.
+                                From monochromatic layers to sustainable fabrics.
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="col-md-4">
+                    <div class="post-item">
+                        <div class="post-image">
+                            <img src="img/blog-3.jpg" alt="Hidden Gems Blog Post">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Lifestyle</span>
+                                <span class="post-date">January 31, 2018</span>
+                            </div>
+                            <h4 class="post-title">Hidden Gems</h4>
+                            <p class="post-excerpt">
+                                Beyond crowded ski resorts, the Alps offer serene villages, authentic cuisine,
+                                and trails that whisper tales of ancient trade routes.
+                            </p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END BLOG -->
+
+
+    <!-- =============================================
+         FOOTER
+         ============================================= -->
+    <footer class="sec-footer">
+        <div class="container">
+            <div class="row">
+
+                <!-- Column 1: About & Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-about">
+                        <div class="footer-logo d-flex align-items-center mb-3">
+                            <i class="fas fa-crown text-warning me-2"></i>
+                            <h4 class="text-white mb-0">Royal Hotel</h4>
+                        </div>
+                        <p class="text-light-50">
+                            Experience luxury and comfort at its finest. Royal Hotel offers world-class amenities,
+                            exceptional service, and unforgettable memories in the heart of the city.
+                        </p>
+                        <div class="footer-contact mt-3">
+                            <div class="contact-item d-flex align-items-center mb-2">
+                                <i class="fas fa-map-marker-alt text-warning me-2"></i>
+                                <span class="text-light-50">123 Royal Street, Cairo, Egypt</span>
+                            </div>
+                            <div class="contact-item d-flex align-items-center mb-2">
+                                <i class="fas fa-phone text-warning me-2"></i>
+                                <span class="text-light-50">+20 123 456 7890</span>
+                            </div>
+                            <div class="contact-item d-flex align-items-center">
+                                <i class="fas fa-envelope text-warning me-2"></i>
+                                <span class="text-light-50">info@royalhotel.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-warning mb-3">Quick Links</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Rooms &amp; Suites</a></li>
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Dining</a></li>
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Spa &amp; Wellness</a></li>
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Events</a></li>
+                        <li> <a href="contact.html" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="text-warning mb-3">Services</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Concierge</a></li>
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Room Service</a></li>
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Airport Transfer</a></li>
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Business Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Fitness Center</a></li>
+                        <li> <a href="#" class="text-light-50 text-decoration-none"><i
+                                    class="fas fa-angle-right me-1"></i> Swimming Pool</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter & Social -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-warning mb-3">Stay Updated</h5>
+                    <p class="text-light-50 mb-3">
+                        Subscribe to our newsletter for exclusive offers and updates from Royal Hotel.
+                    </p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-warning" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="social-links mt-3">
+                        <h6 class="text-warning mb-2">Follow Us</h6>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- End .row -->
+
+            <hr class="border-secondary my-4">
+
+            <!-- Copyright -->
+            <div class="copyright text-center">
+                <p class="text-light-50 mb-2">
+                    &copy; 2026 Royal Hotel. All rights reserved. |
+                    <a href="#" class="text-warning text-decoration-none">Privacy Policy</a> |
+                    <a href="#" class="text-warning text-decoration-none">Terms &amp; Conditions</a>
+                </p>
+                <p class="text-light-50 small">
+                    Coded with <i class="fas fa-heart text-danger"></i> Khaled Elfahl
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+
+    <!-- =============================================
+         SCRIPTS — Load order matters
+         ============================================= -->
+
+    <!-- Bootstrap JS (includes Popper) -->
+    <script src="bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/swiper-fix.js"></script>
+    <script src="js/booking.js"></script>
+
+</body>
+
+</html>

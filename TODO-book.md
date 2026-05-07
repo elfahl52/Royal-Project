@@ -1,0 +1,1 @@
+# Dynamic Book Page TODO\n\n## Steps:\n- [ ] 1. Update index.html navbar add Book Room link to 'book.html'\n- [ ] 2. Create full dynamic book.html (hero, room cards, booking form, payment sim)\n- [ ] 3. Add booking JS to js/main.js or new js/book.js\n- [ ] 4. Add book CSS to css/style.css or new css/book.css\n- [ ] 5. Test booking flow\n- [ ] 6. Complete
