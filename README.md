@@ -55,7 +55,7 @@ Royal-Project/
 ├── index.html # Homepage
 ├── TODO-book.md # Project notes/tasks
 └── README.md # This file
-[![🚀 Live Demo]([https://img.shields.io/badge/🚀_LIVE_DEMO-00A8E8?style=for-the-badge&logo=vercel&logoColor=white)](https://royal-project.vercel.app/](https://royal-project-faj7.vercel.app/))
+[![🚀 Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-00A8E8?style=for-the-badge&logo=vercel&logoColor=white)](https://royal-project-faj7.vercel.app/)
 ⭐ If you like this project, please give it a star! ⭐
 
 |**Khaled Elfahl**|
